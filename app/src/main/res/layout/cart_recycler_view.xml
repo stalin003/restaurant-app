@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/cart_food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.05"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Food Name" />
+
+            <Button
+                android:id="@+id/minus_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:minWidth="48dp"
+                android:text="-"
+                app:layout_constraintStart_toStartOf="@+id/cart_food_name"
+                app:layout_constraintTop_toBottomOf="@+id/cart_food_name" />
+
+            <EditText
+                android:id="@+id/editTextNumberSigned"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:digits="2"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:minHeight="48dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/minus_btn"
+                app:layout_constraintStart_toEndOf="@+id/minus_btn" />
+
+            <Button
+                android:id="@+id/plus_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:minWidth="48dp"
+                android:text="+"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberSigned"
+                app:layout_constraintStart_toEndOf="@+id/editTextNumberSigned" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Rs"
+                app:layout_constraintBaseline_toBaselineOf="@+id/plus_btn"
+                app:layout_constraintEnd_toStartOf="@+id/textView_amt" />
+
+            <TextView
+                android:id="@+id/textView_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+                app:layout_constraintEnd_toStartOf="@+id/textView19"
+                tools:text="105.9" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#FFFFFF"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/plus_btn"
+                app:layout_constraintTop_toTopOf="@+id/plus_btn"
+                app:srcCompat="@drawable/ic_baseline_delete_24"
+                app:tint="#E32222" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="x"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView_amt"
+                app:layout_constraintEnd_toStartOf="@+id/textView18" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
